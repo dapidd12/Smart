@@ -10,22 +10,11 @@ export interface Semester {
   subjects: Subject[];
 }
 
-export interface HistoryItem {
-  id: string;
-  timestamp: number;
-  userName: string;
-  overallAvg: number;
-  totalScore: number;
-  targetAvg: number;
-  completedSemesters: number[];
-}
-
 export interface AppData {
   userName: string;
   semesters: Semester[];
   targetAvg: number;
   totalSemestersTarget: number;
-  history: HistoryItem[];
 }
 
 export enum StatusColor {

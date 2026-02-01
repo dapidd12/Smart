@@ -13,7 +13,7 @@ export const calculateOverallAverage = (semesters: Semester[]): number => {
   return sumOfAverages / semesters.length;
 };
 
-export const STORAGE_KEY = 'future_rapor_v5_data';
+export const STORAGE_KEY = 'smart_rapor_optimized_v1';
 
 export const saveToStorage = (data: AppData) => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -28,8 +28,7 @@ export const loadFromStorage = (): AppData | null => {
       userName: parsed.userName || '',
       semesters: parsed.semesters || [],
       targetAvg: parsed.targetAvg || 85,
-      totalSemestersTarget: parsed.totalSemestersTarget || 6,
-      history: parsed.history || []
+      totalSemestersTarget: parsed.totalSemestersTarget || 6
     };
   } catch (e) {
     return null;
